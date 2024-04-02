@@ -21,8 +21,14 @@ const tagList = collection => {
   return Array.from(tagsSet).sort();
 };
 
+/** Add 100DaysToOffload **/
+const offload = collection => {
+  collection.getFilteredByTag("100DaysToOffload").reverse();
+};
+
 module.exports = {
   getAllPosts,
   onlyMarkdown,
-  tagList
+  tagList,
+  offload
 };

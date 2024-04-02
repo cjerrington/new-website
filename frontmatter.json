@@ -74,5 +74,17 @@
     }
   ],
   "frontMatter.framework.id": "11ty",
-  "frontMatter.preview.host": "http://localhost:8080"
+  "frontMatter.preview.host": "http://localhost:8080",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "pages",
+      "path": "[[workspace]]/src/pages"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/src/posts"
+    }
+  ],
+  "frontMatter.git.enabled": true,
+  "frontMatter.framework.startCommand": "npm run start"
 }

@@ -4,6 +4,7 @@ excerpt: Jekyll has some powerful uses now with categories, tags, post, pages. I
 tags:
   - jekyll
   - 100DaysToOffload
+date: 2023-01-02
 ---
 
 Jekyll has some powerful uses now with categories, tags, post, pages. I found a unique way to create a page just for one post. 

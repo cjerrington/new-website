@@ -1,6 +1,6 @@
 ---
 title: "Working with Tags in Jekyll"
-excerpt: Jekyll has some powerful uses now with categories, tags, post, pages. I found a unique way to create a page just for one post."
+description: Jekyll has some powerful uses now with categories, tags, post, pages. I found a unique way to create a page just for one post."
 tags:
   - jekyll
   - 100DaysToOffload
@@ -15,7 +15,7 @@ Simple way for Jekyll to do this is:
 
 {% raw %}
 
-```highlight ruby4
+```highlight ruby
 { % for tag in site.tags % }
   { { tag[0] } }
 { % endfor % }

@@ -24,6 +24,9 @@ const {
   splitlines
 } = require('./config/filters/index.js');
 
+const _ = require("lodash");
+const postGraph = require('@rknightuk/eleventy-plugin-post-graph')
+
 // module import shortcodes
 const {imageShortcode, includeRaw, liteYoutube} = require('./config/shortcodes/index.js');
 
@@ -31,7 +34,6 @@ const {imageShortcode, includeRaw, liteYoutube} = require('./config/shortcodes/i
 const {getAllPosts} = require('./config/collections/index.js');
 const {onlyMarkdown} = require('./config/collections/index.js');
 const {tagList} = require('./config/collections/index.js');
-const {offload} = require('./config/collections/index.js');
 
 // module import events
 const {svgToJpeg} = require('./config/events/index.js');
@@ -45,7 +47,7 @@ const bundlerPlugin = require('@11ty/eleventy-plugin-bundle');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const markdownLib = require('./config/plugins/markdown.js');
-const {slugifyString} = require('./config/utils/index.js');
+//const {slugifyString} = require('./config/utils/index.js');
 const yaml = require('js-yaml');
 
 module.exports = eleventyConfig => {
@@ -66,7 +68,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('formatDate', formatDate);
   eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
   eleventyConfig.addFilter('stripHtml', stripHtml);
-  eleventyConfig.addFilter('slugify', slugifyString);
+  //eleventyConfig.addFilter('slugify', slugifyString);
   eleventyConfig.addFilter('splitlines', splitlines);
 
   eleventyConfig.addFilter('cssmin', minifyCss);
@@ -96,9 +98,40 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('posts', getAllPosts);
   eleventyConfig.addCollection('onlyMarkdown', onlyMarkdown);
   eleventyConfig.addCollection('tagList', tagList);
-  //eleventyConfig.addCollection('offload', offload);
   eleventyConfig.addCollection("offload", function(collectionApi) {
     return collectionApi.getFilteredByTag("100DaysToOffload").reverse();
+  });
+
+  eleventyConfig.addCollection("postsByYear", (collection) => {
+    // create a collection called postsByYear of a glob of the posts folder and only the markdown files
+    return _.chain(collection.getFilteredByGlob("./src/posts/**/*.md"))
+      .groupBy((post) => post.date.getFullYear())
+      .toPairs()
+      .reverse()
+      .value();
+  });
+
+  eleventyConfig.addCollection("tagList2023", collection => {
+    const tagsObject = {}
+    collection.getFilteredByTag("100DaysToOffload").forEach(item => {
+      if (!item.data.tags) return;
+      item.data.tags
+        .filter(tag => !['post', 'all'].includes(tag))
+        .forEach(tag => {
+          if(typeof tagsObject[tag] === 'undefined') {
+            tagsObject[tag] = 1
+          } else {
+            tagsObject[tag] += 1
+          }
+        });
+    });
+
+    const tagList = []
+    Object.keys(tagsObject).forEach(tag => {
+      tagList.push({ tagName: tag, tagCount: tagsObject[tag] })
+    })
+    return tagList.sort((a, b) => b.tagCount - a.tagCount)
+
   });
 
   // 	--------------------- Events ---------------------
@@ -114,6 +147,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(bundlerPlugin);
   eleventyConfig.setLibrary('md', markdownLib);
+  eleventyConfig.addPlugin(postGraph)
 
   // Add support for YAML data files with .yaml extension
   eleventyConfig.addDataExtension('yaml', contents => yaml.load(contents));

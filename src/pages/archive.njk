@@ -1,0 +1,29 @@
+---
+title: Archive
+description: All of my posts in one place, by year and month
+permalink: /archive/index.html
+layout: page.njk
+---
+
+<p>All my blog posts & notes, chronologically ordered from now back in time.
+<div class="post-listing">
+	<ol class="diary">
+	{% for year in diary() %}
+		<li>
+			<div><h id="{{ year.title }}">{{ year.title }}</h2></div>
+
+			<ol>
+			{% for month in year.months %}
+				<div><h3>{{ month.title }}</h3></div>
+
+				<ol class="diaryEntries">
+				{% for entry in month.entries %}
+					<li class="{{ entry.type }}"><a href="{{ entry.url }}">{{ entry.title }}</a> {% if entry.publication %} for {{ entry.publication }}{% endif %}</li>
+				{% endfor %}
+				</ol>
+			{% endfor %}
+			</ol>
+		</li>
+	{% endfor %}
+	</ol>
+</div>

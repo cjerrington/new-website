@@ -4,7 +4,7 @@ description: Working with zip files in Python to show a progress bar while it is
 tags: 
   - python
   - 100DaysToOffload
-date: 2024-02-12
+date: 2023-02-12
 ---
 
 While working on a deployment script, one of the tasks I needed was to extract a zip file and then edit some files. I was working on this in Python and could easily use the `ZipFile` module, but I like to show some progress to the end users so they know something is happening.

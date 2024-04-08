@@ -1,0 +1,100 @@
+{
+    "blogroll": [
+      {
+        "name": "Adam's Desk",
+        "url": "https://www.adamsdesk.com/",
+        "feed": "https://www.adamsdesk.com/feed/blog.xml"
+      },
+      {
+        "name": "Ben Myers",
+        "url": "https://benmyers.dev/",
+        "feed": "https://benmyers.dev/feed.xml"
+      },
+      {
+        "name": "Benjamin Hollon",
+        "url": "https://benjaminhollon.com/",
+        "feed": "https://benjaminhollon.com/feed/?from=musings%2Ctty1%2Cpoetry%2Cblurbs"
+      },
+      {
+        "name": "Bryce Wray",
+        "url": "https://brycewray.com/",
+        "feed": "https://www.brycewray.com/index.xml"
+      },
+      {
+        "name": "Chris Wiegman",
+        "url": "https://chriswiegman.com/",
+        "feed": "https://chriswiegman.com/feed"
+      },
+      {
+        "name": "Daniel Schroeder",
+        "url": "https://blog.danskingdom.com/",
+        "feed": "https://blog.danskingdom.com/feed.xml"
+      },
+      
+      {
+        "name": "Darek Kay",
+        "url": "https://darekkay.com/",
+        "feed": "https://darekkay.com/atom.xml"
+      },
+      {
+        "name": "Dom",
+        "url": "https://blog.ctms.me/",
+        "feed": "https://blog.ctms.me/index.xml"
+      },
+      {
+        "name": "Garrit Franke",
+        "url": "https://garrit.xyz/",
+        "feed": "https://garrit.xyz/rss.xml"
+      },
+      {
+        "name": "Jeremy",
+        "url": "https://moddedbear.com/",
+        "feed": "https://moddedbear.com/blog/index.xml"
+      },
+      {
+        "name": "Joel G.",
+        "url": "https://joelchrono.xyz/",
+        "feed": "https://joelchrono.xyz/feed.xml"
+      },
+      {
+        "name": "Julia Evans",
+        "url": "http://jvns.ca/",
+        "feed": "https://jvns.ca/atom.xml"
+      },
+      {
+        "name": "Konstantin Tutsch",
+        "url": "https://konstantintutsch.com/",
+        "feed": "https://konstantintutsch.com/feed.xml"
+      },
+      {
+        "name": "Lazybear",
+        "url": "https://lazybear.io/",
+        "feed": "https://lazybear.io/index.xml"
+      },
+      {
+        "name": "MDGRS Factory",
+        "url": "https://mdgrs.hashnode.dev/",
+        "feed": "https://mdgrs.hashnode.dev/rss.xml"
+      },
+      {
+        "name": "Michael Harley",
+        "url": "https://michaelharley.net/",
+        "feed": "https://michaelharley.net/feed/feed.xml"
+      },
+      {
+        "name": "R.L. Dane",
+        "url": "https://rldane.space/",
+        "feed": "https://rldane.space/feeds/all.atom.xml"
+      },
+      {
+        "name": "Werd I/O",
+        "url": "https://werd.io/",
+        "feed": "https://werd.io/feed.xml"
+      },
+      {
+        "name": "Zach Leatherman",
+        "url": "https://www.zachleat.com",
+        "feed": "https://www.zachleat.com/web/feed/"
+      }
+    ]
+}

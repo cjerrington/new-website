@@ -3,7 +3,7 @@ title: "UAC Control"
 description: "I started a few projects with C# and remade an application to control your UAC."
 tags:
   - coding
-  - c sharp
+  - c#
   - projects
 date: 2018-07-01
 ---

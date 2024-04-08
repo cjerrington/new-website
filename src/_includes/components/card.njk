@@ -13,11 +13,13 @@
       <span class="text-step-min-1">
         {% set definedDate = item.date %}
         {% include "components/date.njk" %}
-        {%
-          if
-          activateTags and item.data.tags.length > 1
-        %}
-          <span class="button post-tag"> {{ item.data.tags[1] }} </span>
+        {% if activateTags and item.data.tags.length > 1 %}
+        {% for tag in item.data.tags %}
+          {% if tag != "posts" %}
+            <span class="button post-tag">{{ tag }}</span>
+          {% endif %}
+        {% endfor %}
+          
         {% endif %}
       </span>
     </div>

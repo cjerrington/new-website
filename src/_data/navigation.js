@@ -9,6 +9,10 @@ module.exports = {
       url: '/about/'
     },
     {
+      text: 'Projects',
+      url: '/projects/'
+    },
+    {
       text: 'Blog',
       url: '/blog/'
     },
@@ -19,8 +23,8 @@ module.exports = {
   ],
   bottom: [
     {
-      text: 'Imprint',
-      url: '/imprint/'
+      text: 'Blogroll',
+      url: '/blogroll/'
     },
     {
       text: 'Privacy',

@@ -23,12 +23,12 @@ module.exports = {
   themeBgColor: '#FBFBFB', // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
   opengraph_default: '/assets/images/template/opengraph-default.jpg', // fallback/default meta image
   opengraph_default_alt:
-    'Visible content: Eleventy starter built around the CSS workflow for Cube CSS, Every Layout, Design Tokens and Tailwind for uitility, based on the concepts explained in buildexcellentwebsit.es', // alt text for default meta image
+    'Specialized web designer and software developer ', // alt text for default meta image
   blog: {
     // RSS feed
-    name: 'My Web Development Blog',
+    name: 'Clayton Errington',
     description:
-      'Tell the word what you are writing about in your blog. It will show up on feed readers.',
+      'Specialized web designer and software developer',
     // feed links are looped over in the head. You may add more to the array.
     feedLinks: [
       {
@@ -84,7 +84,7 @@ module.exports = {
   viewRepo: {
     // this is for the view/edit on github link. The value in the package.json will be pulled in.
     allow: true,
-    infoText: 'View this page on GitHub'
+    infoText: 'Edit this page on GitHub'
   },
   easteregg: true
 };

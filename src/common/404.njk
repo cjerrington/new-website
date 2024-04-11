@@ -9,11 +9,11 @@ noindex: true
 
 <p>Go <a href="{{ '/' | url }}">home</a> or browse the archive</p>
 
-{% for year, yearPosts in collections.postsByYear %}
+{%- for year, yearPosts in collections.postsByYear %}
   <h2>{{ year }}</h2>
   <ul>
-    {% for post in yearPosts | reverse %}
+    {%- for post in yearPosts | reverse %}
       <li>{{ post.date | formatDate('MMMM D, YYYY') }} | <a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
-{% endfor %}
+{%- endfor -%}

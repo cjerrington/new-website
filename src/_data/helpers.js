@@ -12,11 +12,11 @@ module.exports = {
     let response = '';
 
     if (itemUrl === pageUrl) {
-      response = ' aria-current="page"';
+      response = 'aria-current="page" ';
     }
 
     if (itemUrl.length > 1 && pageUrl.indexOf(itemUrl.replace('/page-0/', '')) === 0) {
-      response += 'data-state="active"';
+      response += ' data-state="active"';
     }
 
     return response;

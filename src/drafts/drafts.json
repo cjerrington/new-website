@@ -1,0 +1,5 @@
+{
+    "layout": "post",
+    "tags": "draft",
+    "permalink": "/blog/draft/{{ title | slugify }}/index.html"
+}

@@ -19,7 +19,7 @@ I looked for a linux driver just to trick the machine that there was a monitor c
 
 These dummy displays are available for all monitor connections. They have just enough of a device that the motherboard thinks there is a display and then can continue to boot or render graphics the way it should normally. Since this was a way to cut costs and store a machine away in a corner it can take up less resources and power.
 
-When I started with Docker to build my [minetest](blog/nextcloud-docker-compose/) and [Nextcloud](blog/dockerize-minetest/) servers, the machine I was using needed a monitor to configure it which was fine. Once the configuration was done, I no longer needed a monitor but would like to remote into the machine.
+When I started with Docker to build my [minetest](/blog/nextcloud-docker-compose/) and [Nextcloud](/blog/dockerize-minetest/) servers, the machine I was using needed a monitor to configure it which was fine. Once the configuration was done, I no longer needed a monitor but would like to remote into the machine.
 
 Currently my remote access tool of choice is [RustDesk](https://rustdesk.com/) and works on all my systems the way I like and able connect. There is no support for wayland yet, so I had to disable wayland following [these steps](https://linuxconfig.org/how-to-enable-disable-wayland-on-ubuntu-20-04-desktop)
 
@@ -27,7 +27,7 @@ Currently my remote access tool of choice is [RustDesk](https://rustdesk.com/) a
 sudo gedit /etc/gdm3/custom.conf
 {% endhighlight %}
 
-Find the line that talks about uncommenting the line to force the login to use Xorg. Line starting with # are comments. 
+Find the line that talks about uncommenting the line to force the login to use Xorg. Line starting with # are comments.
 
 {% highlight "shell" %}
 # Change the following from

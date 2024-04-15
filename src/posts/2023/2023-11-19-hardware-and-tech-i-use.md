@@ -56,7 +56,7 @@ Inter Core i7-4600U CPU @2.10 GHz\
 * [NextCloud](https://nextcloud.com/)
 * [Portainer](https://www.portainer.io/)
 * [FreshRSS](https://freshrss.org/)
-* [MineTest](minetest.net)
+* [MineTest](https://minetest.net)
 
 **Virtual Machine**
 

@@ -25,10 +25,6 @@ module.exports = {
     {
       text: 'Blogroll',
       url: '/blogroll/'
-    },
-    {
-      text: 'Privacy',
-      url: '/privacy/'
     }
   ]
 };

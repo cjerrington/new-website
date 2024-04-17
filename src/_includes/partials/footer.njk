@@ -4,7 +4,7 @@
       <nav
         class="site-foot__inner text-step-0" aria-label="{{ meta.navigation.ariaBottom }}">
         &copy; {% year %}
-        <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>{{ meta.siteName }} <small>{{ pkg.version }}</small>
+        <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>{{ meta.siteName }}
         </a>
 
         {% for item in navigation.bottom %}
@@ -37,9 +37,5 @@
 
     <!-- theme switch -->
     {% include 'components/theme-switch.njk' %}
-
-    <div class="text-center mt-m-l">
-      <a class="creator text-step-min-1" href="{{ meta.creator.website }}">Made by {{ meta.creator.name }}</a>
-    </div>
   </div>
 </footer>

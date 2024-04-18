@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   url: process.env.URL || 'https://claytonerrington.com',
   siteName: 'Clayton Errington',

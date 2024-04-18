@@ -19,7 +19,7 @@ masonry: true
   </article>
 
   <section class="full | region">
-    <div class="wrapper flow prose">
+    <div class="wrapper flow prose" style="--region-space-bottom: var(--space-xs)">
       <h2>{{ blog.title }}</h2>
       <!-- blog intro text is optional. -->
 
@@ -44,6 +44,7 @@ masonry: true
           {% include 'components/card.njk' %}
         {% endfor %}
       </ul>
+      <a href="/blog">Read more!</a>
     </div>
   </section>
 

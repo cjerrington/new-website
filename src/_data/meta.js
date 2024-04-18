@@ -70,10 +70,10 @@ module.exports = {
     initial: 'select'
   },
   greenweb: {
-    // this goues into src/common/greenweb.njk
+    // this goes into src/common/greenweb.njk
     providers: {
       // if you want to add more than one, edit the array directly.
-      domain: 'netlify.com',
+      domain: 'vercel.com',
       service: 'cdn'
     },
     credentials: {
